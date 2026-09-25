@@ -1,7 +1,5 @@
 # Type 2 Diabetes Genomics & Polygenic Risk Score Pipeline
 
-# Type 2 Diabetes Genomics & Polygenic Risk Score Pipeline
-
 **Python · PLINK2 · Bash · Linux · GWAS · Population Genetics · Polygenic Risk Scoring**
 
 Built an end-to-end genomics workflow to integrate **19.3 million Type 2 Diabetes GWAS associations** with **12.1 million genome-wide variants from 2,504 individuals** in the 1000 Genomes Project.
@@ -97,7 +95,7 @@ Large raw genomic files are not included in this repository because of their siz
 
 ---
 
-# Analysis
+## Analysis
 
 ## 1. GWAS Quality Control
 
@@ -315,7 +313,7 @@ This illustrates why PRS portability, ancestry representation and external valid
 
 ---
 
-# Technical Implementation
+## Technical Implementation
 
 ## Technology Stack
 
