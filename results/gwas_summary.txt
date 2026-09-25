@@ -1,0 +1,25 @@
+T2D GWAS Summary Statistics Analysis
+
+Total variants processed: 19,303,703
+Genome-wide significant variants (P < 5e-8): 64,948
+
+QC results:
+- Missing-value rows: 0
+- Invalid P-values: 0
+- Invalid EAF values: 0
+- Invalid allele rows: 0
+- Same effect/non-effect allele rows: 0
+- Invalid SE values: 0
+- Exact duplicate variant IDs: 0
+
+Extreme P-values:
+- Positive P-values: 19,303,670
+- Variants recorded as P = 0: 33
+- All 33 P=0 variants clustered on chromosome 10 around 114.75-114.82 Mb
+
+Outputs:
+- Manhattan plot: figures/t2d_manhattan.png
+- QQ plot: figures/t2d_qq.png
+- Significant variants: results/t2d_significant_variants.tsv.gz
+- Top 20 positive-P variants: results/t2d_top20_variants.tsv
+- P=0 variants: results/t2d_zero_pvalue_variants.tsv

@@ -1,0 +1,31 @@
+# Raw / large genomic data
+data/raw/
+data/gwas/raw/
+data/processed/
+
+# Large/intermediate results
+results/*.log
+results/*prune.in
+results/*prune.out
+results/t2d_clump_input.tsv
+results/t2d_clumped.clumps
+results/eur_samples.txt
+
+# chr22 pilot/intermediate outputs
+results/chr22_*
+figures/chr22_pca.png
+
+# PCA intermediate files
+results/genomewide_pca.eigenvec
+results/genomewide_pca.eigenval
+
+# Large analysis tables
+results/t2d_1000g_harmonised.tsv
+results/t2d_significant_variants.tsv.gz
+
+# Python / editor / system
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store
+Thumbs.db
