@@ -52,37 +52,23 @@ The second objective was to examine the behaviour of a European-derived PRS acro
 
 ## Workflow
 
+## Workflow
+
+This project integrates a large Type 2 Diabetes GWAS with 1000 Genomes genotype data to perform QC, population structure analysis, variant harmonisation and polygenic risk scoring.
+
 ```mermaid
-flowchart TD
+flowchart LR
+    A["T2D GWAS summary statistics<br/>19.3M variant associations"] --> B["GWAS QC"]
+    C["1000 Genomes Phase 3<br/>2,504 individuals"] --> D["Genome-wide genotype processing"]
+    B --> E["Variant harmonisation"]
+    D --> E
+    D --> F["LD pruning + PCA"]
+    E --> G["Matched GWAS-target variants"]
+    G --> H["LD clumping<br/>EUR reference panel"]
+    H --> I["3,650 PRS variants"]
+    I --> J["PRS scoring in 2,504 individuals"]
+    J --> K["Cross-population comparison"]
 
-    A[T2D GWAS<br/>19.3M associations] --> B[GWAS Quality Control]
-
-    C[1000 Genomes Phase 3<br/>2,504 individuals] --> D[PLINK2 Genotype Processing]
-
-    B --> E[Manhattan + QQ Plots]
-
-    D --> F[Genome-wide SNP QC<br/>12.1M variants]
-
-    F --> G[MAF Filtering + LD Pruning]
-
-    G --> H[PCA<br/>286,036 SNPs]
-
-    B --> I[GWAS-Genotype Harmonisation]
-    F --> I
-
-    I --> J[9.25M Matched Variants]
-
-    J --> K[P-value Threshold<br/>P < 1e-5]
-
-    K --> L[EUR LD Clumping<br/>503 samples<br/>r2 = 0.1, 250 kb]
-
-    L --> M[3,650 Index Variants]
-
-    M --> N[Polygenic Risk Scoring]
-
-    N --> O[2,504 Individual Scores]
-
-    O --> P[Cross-population<br/>PRS Comparison]
 ```
 
 ---
