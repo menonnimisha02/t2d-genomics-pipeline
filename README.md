@@ -54,7 +54,7 @@ The second objective was to examine the behaviour of a European-derived PRS acro
 
 The analysis integrates T2D GWAS summary statistics with 1000 Genomes genotype data through genome-wide quality control, population structure assessment, variant harmonisation, LD clumping and polygenic risk scoring.
 
-![T2D Genomics and PRS Workflow](figures/t2d_workflow.png)
+![T2D Genomics and PRS Workflow](figures/t2d_genomics_workflow.png)
 
 ## Data Sources
 
