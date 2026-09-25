@@ -52,26 +52,9 @@ The second objective was to examine the behaviour of a European-derived PRS acro
 
 ## Workflow
 
-## Workflow
+The analysis integrates T2D GWAS summary statistics with 1000 Genomes genotype data through genome-wide quality control, population structure assessment, variant harmonisation, LD clumping and polygenic risk scoring.
 
-This project integrates a large Type 2 Diabetes GWAS with 1000 Genomes genotype data to perform QC, population structure analysis, variant harmonisation and polygenic risk scoring.
-
-```mermaid
-flowchart LR
-    A["T2D GWAS summary statistics<br/>19.3M variant associations"] --> B["GWAS QC"]
-    C["1000 Genomes Phase 3<br/>2,504 individuals"] --> D["Genome-wide genotype processing"]
-    B --> E["Variant harmonisation"]
-    D --> E
-    D --> F["LD pruning + PCA"]
-    E --> G["Matched GWAS-target variants"]
-    G --> H["LD clumping<br/>EUR reference panel"]
-    H --> I["3,650 PRS variants"]
-    I --> J["PRS scoring in 2,504 individuals"]
-    J --> K["Cross-population comparison"]
-
-```
-
----
+![T2D Genomics and PRS Workflow](figures/t2d_workflow.png)
 
 ## Data Sources
 
