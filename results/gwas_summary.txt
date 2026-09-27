@@ -10,7 +10,6 @@ QC results:
 - Invalid allele rows: 0
 - Same effect/non-effect allele rows: 0
 - Invalid SE values: 0
-- Exact duplicate variant IDs: 0
 
 Extreme P-values:
 - Positive P-values: 19,303,670
