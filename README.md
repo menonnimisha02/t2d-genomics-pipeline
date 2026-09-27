@@ -111,7 +111,6 @@ Python-based QC assessed:
 - invalid allele labels
 - identical effect/non-effect alleles
 - invalid standard errors
-- duplicate variant identifiers
 
 ### QC Results
 
@@ -124,7 +123,6 @@ Python-based QC assessed:
 | Invalid allele rows | **0** |
 | Identical effect/non-effect alleles | **0** |
 | Invalid standard errors | **0** |
-| Exact duplicate variant keys | **0** |
 | Genome-wide significant variant associations | **64,948** |
 
 Thirty-three extremely significant records were represented with `P = 0` in the source file because their values were below numerical precision. These were treated as extremely small P-values rather than literal probabilities of zero when visualising the data.
