@@ -343,6 +343,7 @@ t2d-genomics-pipeline/
 │
 ├── figures/
 │   ├── genomewide_pca.png
+│   ├── t2d_genomics_workflow.png
 │   ├── t2d_manhattan.png
 │   ├── t2d_prs_by_ancestry.png
 │   └── t2d_qq.png
@@ -364,9 +365,12 @@ t2d-genomics-pipeline/
 │   ├── manhattan_plot.py
 │   ├── plot_genomewide_pca.py
 │   ├── plot_prs_by_ancestry.py
+│   ├── prepare_prs_inputs.py
 │   ├── process_1000g_autosomes.sh
-│   └── qq_plot.py
+│   ├── qq_plot.py
+│   └── run_genomewide_prs.sh
 │
+├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
@@ -377,14 +381,16 @@ t2d-genomics-pipeline/
 
 | Script | Purpose |
 |---|---|
-| `gwas_qc.py` | Quality control of 19.3M GWAS records |
+| `gwas_qc.py` | Performs quality control on 19.3M GWAS records |
 | `extract_gwas_results.py` | Extracts significant and top GWAS associations |
-| `manhattan_plot.py` | Generates genome-wide Manhattan plot |
-| `qq_plot.py` | Generates GWAS QQ plot |
-| `process_1000g_autosomes.sh` | Automates PLINK2 processing across chromosomes 1–22 |
+| `manhattan_plot.py` | Generates the genome-wide Manhattan plot |
+| `qq_plot.py` | Generates the GWAS QQ plot |
+| `process_1000g_autosomes.sh` | Downloads and processes chromosomes 1–22 with PLINK2 |
 | `plot_genomewide_pca.py` | Integrates PCA results with population metadata |
 | `harmonise_gwas_1000g.py` | Matches GWAS and target variants by position and alleles |
+| `prepare_prs_inputs.py` | Creates the European LD reference sample list and PRS clumping input |
 | `make_prs_weights.py` | Generates the final clumped PRS weight file |
+| `run_genomewide_prs.sh` | Runs genome-wide merging, PCA, harmonisation, LD clumping and PRS scoring |
 | `plot_prs_by_ancestry.py` | Standardises and compares PRS distributions across populations |
 
 ---
